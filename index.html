@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="language" content="ru">
+  <meta name="description" content=""/>
+  <meta name="keywords" content=""/>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <title>Ты покормил сегодня кота? | Тестовое задание на позицию Младший фронтенд-разработчик (HTML/CSS/JS, Junior) от FunBox</title>
+  <link rel='icon' type='image/png' href="assets/img/favicon/favicon.png' %}">
+  <link rel="stylesheet" href="assets/css/normalize.css">
+  <link rel="stylesheet" href="dist/style.css">
+</head>
+<body>
+<main>
+  <section class="catalog">
+    <h1 class="catalog__title">Ты сегодня покормил кота?</h1>
+    <div class="catalog__products">
+
+      <article class="catalog__item">
+        <input type="checkbox" id="card1"/>
+        <div class="product-card">
+          <p class="product-card__note" data-hover="Котэ не одобряет?" data-nohover="Сказочное заморское яство"></p>
+          <h2 class="product-card__title">Нямушка <span>с фуа-гра</span></h2>
+          <ul class="product-card__description">
+            <li><span>10</span> порций</li>
+            <li>мышь в подарок</li>
+          </ul>
+          <div class="product-card__weight">0,5 <span>кг</span></div>
+          <img src="assets/img/cat.png" class="product-card__image" alt="Нямушка с фуа-гра">
+        </div>
+        <div class="catalog__item-footnote">
+          <p data-checked="Печень утки разварная с артишоками." data-unchecked="Чего сидишь? Порадуй котэ,&nbsp;" data-disabled="Печалька, с фуа-гра закончился."></p><button class="js__productCheck" onclick="productCheck(this)" type="button">купи.</button>
+        </div>
+      </article>
+
+      <article class="catalog__item">
+        <input type="checkbox" id="card2"/>
+        <div class="product-card">
+          <p class="product-card__note" data-hover="Котэ не одобряет?" data-nohover="Сказочное заморское яство"></p>
+          <h2 class="product-card__title">Нямушка <span>с рыбой</span></h2>
+          <ul class="product-card__description">
+            <li><span>40</span> порций</li>
+            <li><span>2</span> мыши в подарок</li>
+          </ul>
+          <div class="product-card__weight">2 <span>кг</span></div>
+          <img src="assets/img/cat.png" class="product-card__image" alt="Нямушка с фуа-гра">
+        </div>
+        <div class="catalog__item-footnote">
+          <p data-checked="Головы щучьи с чесноком да свежайшая сёмгушка." data-unchecked="Чего сидишь? Порадуй котэ,&nbsp;" data-disabled="Печалька, с рыбой закончился."></p><button class="js__productCheck" onclick="productCheck(this)" type="button">купи.</button>
+        </div>
+      </article>
+
+      <article class="catalog__item">
+        <input type="checkbox" id="card3" disabled/>
+        <div class="product-card">
+          <p class="product-card__note" data-hover="Котэ не одобряет?" data-nohover="Сказочное заморское яство"></p>
+          <h2 class="product-card__title">Нямушка <span>с курой</span></h2>
+          <ul class="product-card__description">
+            <li><span>100</span> порций</li>
+            <li><span>5</span> мышей в подарок</li>
+            <li>заказчик доволен</li>
+          </ul>
+          <div class="product-card__weight">5 <span>кг</span></div>
+          <img src="assets/img/cat.png" class="product-card__image" alt="Нямушка с фуа-гра">
+        </div>
+        <div class="catalog__item-footnote">
+          <p data-checked="Филе из цыплят с трюфелями в бульоне." data-unchecked="Чего сидишь? Порадуй котэ,&nbsp;" data-disabled="Печалька, с курой закончился."></p><button class="js__productCheck" onclick="productCheck(this)" type="button">купи.</button>
+        </div>
+      </article>
+
+    </div>
+  </section>
+</main>
+<script type="text/javascript">   
+    function productCheck(element) {
+        let productCheckButton = element.closest('.catalog__item').querySelector('input');
+        productCheckButton.checked=true;
+    }
+</script>
+</body>
+</html>
